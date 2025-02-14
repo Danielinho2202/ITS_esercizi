@@ -1,1 +1,1 @@
-print ("hello world")
+for number in range (10):   print ("hello world")

@@ -5,9 +5,14 @@ print (f"Hey {name} , where are you from?")
 print(name.lower())  
 print(name.upper()) 
 print(name.title()) 
-#2-5
+#2-6
 quote:str = ("i like computers!")
 famous_person = ("Daniele")
 print(f"{famous_person} disse: {quote}" )
+
+#3-1
+names:list=["Daniele","Valerio","Francesco","Pietro"] 
+print (list())
+
 
 

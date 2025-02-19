@@ -1,0 +1,11 @@
+#3-1
+names:list=["Daniele","Valerio","Francesco","Pietro"] 
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])
+#3-2
+print (f"Ciao {names[0]}, da dove vieni?" )
+print (f"Ciao {names[1]}, da dove vieni?" )
+print (f"Ciao {names[2]}, da dove vieni?" )
+print (f"Ciao {names[3]}, da dove vieni?" )

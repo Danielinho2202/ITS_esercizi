@@ -10,3 +10,7 @@ quote:str = ("i like computers!")
 famous_person = ("Daniele")
 print(f"{famous_person} disse: {quote}" )
 
+#lower o upper si usa per cercare di comparare le stringhe
+#per visualizzare le virgolette: 
+# 2 modi: (f"{famous_person} disse: \"{quote}\"" )
+#(f"{famous_person} disse: {quote}" )

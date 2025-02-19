@@ -1,3 +1,0 @@
-#3-1
-names:list=["Daniele","Valerio","Francesco","Pietro"] 
-print(names[])

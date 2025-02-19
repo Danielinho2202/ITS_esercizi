@@ -1,0 +1,10 @@
+som:float=0
+for i in range (3):
+    (n) = float(input("inserisci un numero"))
+    som=som+n
+
+print (som)
+
+
+
+

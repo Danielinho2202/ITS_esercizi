@@ -10,9 +10,3 @@ quote:str = ("i like computers!")
 famous_person = ("Daniele")
 print(f"{famous_person} disse: {quote}" )
 
-#3-1
-names:list=["Daniele","Valerio","Francesco","Pietro"] 
-print (list())
-
-
-

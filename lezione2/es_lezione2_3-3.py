@@ -4,4 +4,3 @@ print (f"I would like to own a {mezzi[1]}!" )
 print (f"I would like to own a {mezzi[2]}!" )
 print (f"I would like to own a {mezzi[3]}!" )
 
-print (f"I would like to own a {mezzi[2]}!" )

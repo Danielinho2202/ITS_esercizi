@@ -7,8 +7,8 @@ statement match per fornire una risposta adeguata da inserire in un documento di
 - Se il valore di gender è diverso da "m" o "f", stampare un messaggio di errore, indicando 
 che non è possibile generare un documento di identità.'''
 
-nome=(str(input("Inserire nome: ")))
-gender=(str(input("Inserire gender. Digitare m per maschio e f per femmina: ")))
+nome=str(input("Inserire nome: "))
+gender=(str(input("Inserire gender. Digitare m per maschio e f per femmina: "))).lower()
 
 print (f"Nome: {nome}")
 

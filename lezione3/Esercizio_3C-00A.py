@@ -11,6 +11,7 @@
 
 neonati=(int(input("Inserire il numero di neonati: ")))
 
+
 match neonati:
     case 1:
         print ("Congratulazioni!")

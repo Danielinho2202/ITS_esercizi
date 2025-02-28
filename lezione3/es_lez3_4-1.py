@@ -8,8 +8,8 @@ of output containing a simple statement like I like pepperoni pizza.
 much you like pizza. The output should consist of three or more lines about the
 kinds of pizza you like and then an additional sentence, such as I really love pizza!'''
 
-
 pizze:list= ["margherita","boscaiola","diavola"]
+
 for i in range (0,len(pizze)):
     print (pizze[i])
 

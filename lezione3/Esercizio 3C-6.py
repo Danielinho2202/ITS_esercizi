@@ -22,6 +22,9 @@ habitat_type=["terra","acqua","aria"]
 
 animale=str(input("Inserisci un animale: ")).lower()
 
+habitat=str(input("Inserisci l'habitat in cui vive l'animale: ")).lower()
+
+
 match animale:
     case animale if animale in Mammiferi:
         print (f"{animale} appartiene alla categoria dei mammiferi!")
@@ -39,38 +42,65 @@ match animale:
         (f"Non so a che categoria appartiene {animale}!")
         animal_type="sconosciuto"
 
-habitat=str(input("Inserisci l'habitat in cui vive l'animale: ")).lower()
-
 info_animale={"nome":animale,"categoria":animal_type,"habitat":habitat}
 
 match info_animale:
-    case info_animale if "categoria"=="mammiferi" :
-        match animale:
-            case "balena"|"delfino":
-                if habitat=="acqua":
-                    print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
-                else:
-                    print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
-            case _:
-                if habitat=="terra":
-                    print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
-                else:
-                    print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
-    case info_animale if "categoria"=="rettili":
-        match animale:
-            case "coccodrillo"|"tartaruga":
-                if habitat=="terra" or habitat=="acqua":
-                    print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
-                else:
-                    print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
-            
-
-
-
-
-
-
-
-
-
+    case {"habitat":"terra"}|{"habitat":"aria"}|{"habitat":"acqua"}:
+        match info_animale:
+            case {"categoria":"mammiferi"}:
+                match info_animale:
+                    case {"nome":"delfino"}|{"nome":"balena"}:
+                        match info_animale:
+                            case {"habitat":"acqua"}:
+                                print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                            case _:
+                                print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")    
+                    case _:
+                        if habitat=="terra":
+                            print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                        else:
+                            print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
+            case {"categoria":"rettili"}:
+                match info_animale:
+                    case {"nome":"coccodrillo"}|{"nome":"tartaruga"}:
+                        if habitat=="terra" or habitat=="acqua":
+                            print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                        else:
+                            print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
+                    case _:
+                        match info_animale:
+                            case {"habitat":"terra"}:
+                                print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                            case _:
+                                print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
+            case {"categoria":"uccelli"}:
+                match info_animale:
+                    case {"nome":"cigno"}|{"nome":"anatra"}:
+                        match info_animale:
+                            case {"habitat":"acqua"}|{"habitat":"terra"}:
+                                print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                            case _:
+                                print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}") 
+                    case {"nome":"gallina"}|{"nome":"tacchino"}:
+                        match info_animale:
+                            case {"habitat":"terra"}:
+                                print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                            case _:
+                                print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}") 
+                    case _:
+                        match info_animale:
+                            case {"habitat":"aria"}:
+                                print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                            case _:
+                                print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
+            case {"categoria":"pesci"}:
+                match info_animale:
+                    case {"habitat":"acqua"}:
+                        print (f"L'animale {animale} è uno dei mammiferi che può vivere in {habitat}!")
+                    case _:
+                        print (f"non ho mai visto l'animale {animale} vivere nell'habitat {habitat}")
+            case {"categoria":"sconosciuto"}:
+                print (f"Non so in categoria mettere l'animale {animale}!")
+    case _:
+        print (f"non conosco l'habitat {habitat}")
 

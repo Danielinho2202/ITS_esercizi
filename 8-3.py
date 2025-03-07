@@ -7,5 +7,6 @@ arguments.'''
 def make_shirt(size:str,text:str):
     print (f"la taglia è: {size}; La frase è: {text}")
 
-make_shirt(size="5XL", text= "IO SONO IL CAPOBRANCO DEI MIEI PAGURI")
+make_shirt(size="5XL", text= "sono io IL CAPOBRANCO DEI MIEI PAGURI")
+make_shirt("5XL","sono io il capobranco dei miei paguri")
            

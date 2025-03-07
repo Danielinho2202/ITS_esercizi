@@ -19,7 +19,9 @@ Nota: Il programma deve iterare fino a raggiungere ciascuna delle soglie indicat
 denominatore=1
 totale=4
 count=1
-while totale!=3.14:
+controllo=False
+
+while controllo!=True:
     if count%2!=0:                                      #mi da errore in questo rigo, non so come impostare il ciclo in altro modo, 
                                                         #ho guardato su internet e forse l'approssimazione poteva servire, ma non ho capito bene il funzionamento.
         totale=totale-4/denominatore
@@ -27,6 +29,11 @@ while totale!=3.14:
         totale=totale+4/denominatore
     count+=1
     denominatore+=2
+    if totale==3.14:
+        controllo=True
+
+
+    
 
 
 print (count)

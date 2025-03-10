@@ -35,7 +35,7 @@ while data!=True:
                     mese=int(input("inserisci mese: "))
                 case _:
                     data=True
-        case _:
+        case mese if mese<13:
             match giorno:
                 case giorno if giorno>31:
                     print ("data non esistente")
@@ -43,9 +43,12 @@ while data!=True:
                     mese=int(input("inserisci mese: "))
                 case _:
                     data=True
-        
+        case _:
+            print ("data non esistente")
+            giorno=int(input("inserisci giorno: "))
+            mese=int(input("inserisci mese: "))
 
-        
+      
 
 data=(giorno, mese)
 

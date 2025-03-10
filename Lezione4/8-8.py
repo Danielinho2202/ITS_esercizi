@@ -7,13 +7,14 @@ def make_album(name:str, title:str, numero_canzoni=None):
     album:dict={"nome":name,"titolo":title,"numero canzoni":numero_canzoni}
     return (album)
 
-risposta=str(input("vuoi inserire un'album? "))
+risposta=str(input("vuoi inserire un'album (si per continuare)? "))
 while risposta=="si":
     name=str(input("inserisci nome artista: "))
+    
     title=str(input("inserisci nome album: "))
+    
     numero_canzoni=int(input("inserisci numero canzoni "))
+    
     print (make_album(name,title,numero_canzoni))
+    
     risposta=str(input("vuoi inserire un'album? "))
-
-
-

@@ -2,23 +2,27 @@
 each text message and moves each message to a new list called sent_messages as it’s printed.
  After calling the function, print both of your lists to make sure the messages were moved correctly.'''
 
-
-messaggi=["ciao","tutto bene?","wow!","acciderbolina!"]
-
-def show_messages(messaggi):
+def show_messages(*messaggi:list):
     for messaggio in messaggi:
         print (messaggio)
 
+#show_messages ("ciao","tutto bene?","wow!","acciderbolina!")
 
-def send_messages():
+
+def send_messages(*messaggi:list):
+    messages=(list(messaggi))
     messaggi_ricevuti:list=[]
-    for messaggio in messaggi:
-        print (messaggio)
-        messaggi_ricevuti.append(messaggio)
-    print (messaggi_ricevuti)
-    print (messaggi)
+    while len(messages)>0:
+        
+        print (messages[0])
+        
+        messaggi_ricevuti.append(messages[0])
+        messages.pop(0)
 
-send_messages()
+    print (messaggi_ricevuti)
+    print (messages)
+
+send_messages("ciao","tutto bene?","wow!","acciderbolina!")
 
 
 

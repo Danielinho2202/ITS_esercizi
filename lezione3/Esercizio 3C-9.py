@@ -21,10 +21,19 @@ y=float(input("inserisci y= "))
 coordinate:tuple=(x,y)
 
 match coordinate:
-    case coordinate if x==0:
-        match y:
-            case 0:
-                print ("il punto si trova nell'origine")
-            case _:
-                print ("il punto si trova sull'asse x")
+    case (0,0):
+        print ("il punto si trova nell'origine")
+    case (x,0):
+        print ("il punto si trova sull'asse x")
+    case (0,y):
+        print ("il punto è sull'asse y")
+    case (x,y) if x<0 and y<0:
+        print ("terzo quadrante")
+    case (x,y) if x>0 and y>0:
+        print ("primo quadrante")
+    case (x,y) if x<0 and y>0:
+        print ("secondo quadrante")
+    case (x,y) if x>0 and y<0:
+        print ("quarto quadrante")
+
 

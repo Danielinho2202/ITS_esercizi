@@ -14,30 +14,25 @@ quanti termini sono necessari per ottenere approssimazioni sempre più accurate.
     modificare l'algoritmo, mostrando in output quanti termini della serie devono 
     essere usati per ottenere il valore di π ≈ 3.14159.
 
-Nota: Il programma deve iterare fino a raggiungere ciascuna delle soglie indicate, contando il numero di termini necessari.'''
+Nota: Il programma deve iterare fino a raggiungere ciascuna delle soglie indicate, contando il numero di termini necessari.
+'''
 
-denominatore=1
-totale=4
-count=1
-controllo=False
+denominatore:int = 1 
+totale:float = 4.0
+count:int = 0
 
-while controllo!=True:
-    if count%2!=0:                                      #mi da errore in questo rigo, non so come impostare il ciclo in altro modo, 
-                                                        #ho guardato su internet e forse l'approssimazione poteva servire, ma non ho capito bene il funzionamento.
-        totale=totale-4/denominatore
+while round(totale, 2) != 3.14:
+    
+    if count%2!=0:                                      
+        totale = totale - 4/denominatore
     else:
-        totale=totale+4/denominatore
+        totale = totale + 4/denominatore
+    
+    
     count+=1
     denominatore+=2
-    if totale==3.14:
-        controllo=True
+print(count)
 
 
-    
 
-
-print (count)
         
-
-
-

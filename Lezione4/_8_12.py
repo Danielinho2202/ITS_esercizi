@@ -5,6 +5,10 @@ The function should have one parameter that collects as many items as the functi
 
 
 def sandwich(*args):
-    list(args)
-    for arg in args:
-        
+    ingredienti=list(args)
+    for ingrediente in ingredienti:
+        print (f"- {ingrediente}")
+
+sandwich("pomodoro","tonno","formaggio")
+sandwich("formaggio","prosciutto","salame")
+sandwich("broccoli","salsiccia")

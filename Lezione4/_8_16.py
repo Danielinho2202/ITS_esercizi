@@ -10,10 +10,10 @@ from module_name import *'''
 
 #from _8_6 import *
 
-#from _8_6 import make_album
-#make_album("lazza","locura")
+from _8_6 import make_album as mk
+#mk("lazza","locura","263374")
 
-from _8_6 import make_album as ma
-ma("")
+from _8_6 import make_album
+#make_album
 
 

@@ -14,12 +14,3 @@ def make_album(name:str, title:str, numero_canzoni=None):
     album:dict={"nome":name,"titolo":title,"numero canzoni":numero_canzoni}
     return (album)
 
-
-print (make_album("Lazza","Locura"))
-print (make_album("Caparezza", "Museica"))
-print (make_album("El Pollo", "Daniel"))
-print (make_album("Lazza","Locura","12"))
-
-
-
-

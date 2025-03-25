@@ -13,7 +13,7 @@ def media_studente(studente:str,voti):
 
 
     media=somma/n
-    print (f"La media dello studente {studente} è {media}")
+    print (f"La media dello studente {studente} è {media:.2f}")
     return media
 
 def studente_ammesso(studente,media):

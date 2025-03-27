@@ -16,10 +16,14 @@ def visualizza (posizione_tartaruga,posizione_lepre):
     
     print("".join(percorso))
 
+def meteo_(n):
+    if (n//10)%2==0:
+        return "sole"
+    else:
+        return "pioggia"
 
-    
 
-def tartaruga(posizione):
+def tartaruga(posizione,meteo):
     dado=random.randint(1,10)
     if 1<=dado<=5:
         posizione+=3
@@ -27,14 +31,16 @@ def tartaruga(posizione):
         posizione-=6
     else:
         posizione+=1
+    if meteo=="pioggia":
+        posizione-=2
+
     if posizione<=0:
         posizione=0
-
 
     return posizione
 
 
-def lepre(posizione):
+def lepre(posizione,meteo):
     dado=random.randint(1,10)
     if 1<=dado<=2:
         pass
@@ -45,6 +51,8 @@ def lepre(posizione):
     elif 6<=dado<=8:
         posizione+=1
     else:
+        posizione-=2
+    if meteo=="pioggia":
         posizione-=2
     if posizione<0:
         posizione=0
@@ -58,10 +66,14 @@ def gara():
     print ("Partenza!")
     posizione_tartaruga=0
     posizione_lepre=0
+    n=0
     while True:
-        
-        posizione_tartaruga=tartaruga(posizione_tartaruga)
-        posizione_lepre=lepre(posizione_lepre)
+        meteo=meteo_(n)
+        n+=1
+
+        posizione_tartaruga=tartaruga(posizione_tartaruga,meteo)
+        posizione_lepre=lepre(posizione_lepre,meteo)
+
 
         if posizione_tartaruga>69 and posizione_lepre>69:
             print ("pareggio")

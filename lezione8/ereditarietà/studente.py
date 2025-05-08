@@ -1,4 +1,4 @@
-from persona import Persona
+from lezione8.polimorfismo.persona import Persona
 
 class Studente(Persona):
     def __init__(self, name: str, lastname: str, age: int, matricola: str):

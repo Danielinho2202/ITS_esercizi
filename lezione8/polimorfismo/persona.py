@@ -34,6 +34,10 @@ class Persona:
     
     def get_age(self):
         return self.age
+    
+    #metodo per la classe persona che simula un saluto
+    def speak(self) -> None:
+        print (f"\nHello! My name is {self.get_name()}\n")
 
 
 

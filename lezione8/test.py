@@ -1,5 +1,5 @@
-from persona import Persona
-from studente import Studente
+from lezione8.polimorfismo.persona import Persona
+from lezione8.ereditarietà.studente import Studente
 
 p1: Persona = Persona("Daniele", "Gallo", 21)
 print(p1)

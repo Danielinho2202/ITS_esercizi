@@ -8,7 +8,7 @@ class Persona:
     def displayData(self) -> None:
         print (f"Nome: {self.name}\nCognome: {self.lastname}\netà: {self.age}")
 
-    #funzione che mi consenta di impostare il valore di self.name
+    #funzione che mi consente di impostare il valore di self.name
     def setname(self,name:str) -> None:
         self.name = name
 

@@ -1,0 +1,8 @@
+FROM python:3.11.11
+
+COPY requirements.txt /
+RUN pip install -r requirements.txt
+
+RUN mkdir /il_mio_progetto
+COPY prova_simulazione.py /il_mio_progetto
+WORKDIR /il_mio_progetto

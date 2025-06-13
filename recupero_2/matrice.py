@@ -14,7 +14,7 @@ print (somma_matrici_primary(mat1))
 
 
 def somma_matrici_secondaria(lista:list[list]):
-    index=len(lista)
+    index=len(lista)-1
     somma=0
     for lis in lista:
         somma=somma+lis[index]
@@ -25,4 +25,4 @@ mat1 = [
 [4, 5, 6],
 [7, 8, 9]
 ]
-print (somma_matrici_primary(mat1)) 
+print (somma_matrici_secondaria(mat1)) 

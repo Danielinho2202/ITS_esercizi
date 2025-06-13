@@ -17,17 +17,8 @@ def ricerca_binaria(n:int,lista_o:list) ->bool:
             mid = (end+start)//2
     return True
 
-list = [1, 3, 5, 7, 9]
+list = [1, 3, 5, 7, 9, 12, 18, 20, 28, 35, 40, 64, 84]
 print (ricerca_binaria(3, list ))
 print (ricerca_binaria(-1, list)) 
 print (ricerca_binaria(9, list))
-print (ricerca_binaria(1, list))
-        
-
-
-                
-            
-            
-
-        
-        
+print (ricerca_binaria(1, list))    

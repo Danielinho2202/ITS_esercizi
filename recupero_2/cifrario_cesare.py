@@ -38,9 +38,4 @@ def caesar_cypher_decrypt(s:str,key:int):
     return s_result
             
 s="zabcdefghijklmnopqrstuvwxy"
-print(caesar_cypher_encrypt(s,25))
-
-
-
-
-
+print(caesar_cypher_decrypt(s,25))

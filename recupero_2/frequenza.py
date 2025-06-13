@@ -2,14 +2,18 @@
 def freq(s:str) ->dict:
     conteggio:dict={}
     lista_token=[]
-    token=""
+    token=" "
     for char in s:
         if char != ' ':
             token+=char
         else:
-            token_pulito=token.strip(".?,!;: ")
+            token_pulito=token.lower().strip(".?,!;: ")
             lista_token.append(token_pulito)
-            token=""
+            token= ''
+    if token:
+        token_pulito=token.lower().strip(".?,!;: ")
+        lista_token.append(token_pulito)
+
 
     for token in lista_token:
         if token:
@@ -20,5 +24,4 @@ def freq(s:str) ->dict:
     return conteggio
 
 print (freq("Hello, world! Hello... PYTHON? world."))
-
-
+#da fare con split()

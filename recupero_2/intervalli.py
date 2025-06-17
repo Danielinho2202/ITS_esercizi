@@ -7,7 +7,6 @@ def merge_intervals(intervals:list[list]):
         if intervals[i][0]<=intervals[i-1][1]:
             intervals[i-1][1]=intervals[i][1]
             del intervals[i]
-            i+=1
         else:
             i+=1
 
@@ -16,7 +15,7 @@ def merge_intervals(intervals:list[list]):
 
 
 
-intervals = [[1, 3], [2, 6], [8, 10], [15, 18],[16, 45]]
+intervals = [[1, 3], [2, 6], [4, 8], [8, 10], [15, 18],[16, 45]]
 print(merge_intervals(intervals)) # restituisce [[1, 6], [8, 10], [15,18]]
 intervals = [[1, 4], [4, 5]]
 print(merge_intervals(intervals)) # restituisce [[1, 5]]

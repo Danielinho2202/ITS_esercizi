@@ -9,5 +9,5 @@ def charDuplicator(stringa:str):
         return ""
     else:
         return stringa[0]+stringa[0]+charDuplicator(stringa[1:])
-    
+
 print (charDuplicator("ciao"))

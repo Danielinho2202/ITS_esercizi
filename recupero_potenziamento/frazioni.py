@@ -51,7 +51,7 @@ def mcd(x:int,y:int):
         for i in range (1,x//2+1):
             if x%i==0:
                 list_div_x.append(i)
-        list_div_x.append(x) #almeno che non sia zero dovrei fare, penso
+        list_div_x.append(x)
     if y!=0:
         for i in range (1,y//2+1):
             if y%i==0:
@@ -79,10 +79,10 @@ def mcd(x:int,y:int):
 def semplifica(l:list[Frazione]):
     new_list=[]
     for f in  l:
-        if mcd(f.num,f.den)!=1.0:
-            m=mcd(f.num,f.den)
-            f.num/=m
-            f.den/=m
+        if mcd(f.get_num(),f.get_den())!=1.0:
+            m=mcd(f.get_num(),f.get_den())
+            f.set_num(f.get_num()/m)
+            f.set_den(f.get_den()/m)
         new_list.append(f)
     return new_list
 
@@ -96,3 +96,6 @@ def fractionCompare(l:list[Frazione],ris:list[Frazione]):
 l = [Frazione(2.5,0),Frazione(1,2),Frazione(2,4),Frazione(3,5),Frazione(6,9),Frazione(4,7),Frazione(24,36),Frazione(12,36),Frazione(40,60),Frazione(5,11),Frazione(10,45),Frazione(42,78),Frazione(9,15)]
 l_s=semplifica(l)
 fractionCompare (l,l_s)
+
+
+#da fare privato

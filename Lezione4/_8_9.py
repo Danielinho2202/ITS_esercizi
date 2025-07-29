@@ -11,3 +11,6 @@ def show_messages(messaggi):
 
 
 show_messages(messaggi)
+show_messages(messaggi)
+
+
